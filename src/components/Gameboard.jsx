@@ -22,7 +22,7 @@ const GAME_BOARD = [
   [null, null, null],
 ];
 
-export default function Gameboard({ isMobileDevice }) {
+export default function Gameboard() {
   const [isX, setIsX] = useState(true);
   const [gameBoard, setGameBoard] = useState(GAME_BOARD);
   const [winner, setWinner] = useState(null);
@@ -95,8 +95,8 @@ export default function Gameboard({ isMobileDevice }) {
               onClick={() => handleClick(rowIdx, colIdx)}
               isDisabled={gameBoard[rowIdx][colIdx] != null}
               style={{
-                height: isMobileDevice ? "70px" : "100px",
-                width: isMobileDevice ? "70px" : "100px",
+                height: "100px",
+                width: "100px",
               }}
               boxShadow="5px 5px 10px #3d3d3d"
               bg="#f7fb82"
