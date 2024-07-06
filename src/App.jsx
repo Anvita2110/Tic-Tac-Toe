@@ -45,8 +45,8 @@ function App() {
           bgColor="#ccb3ff"
           boxShadow="5px 5px 10px #9e56e1"
           borderRadius="xl"
-          py="2.5rem"
-          px="3rem"
+          py={isMobileDevice ? "1.5rem" : "2.5rem"}
+          px={isMobileDevice ? "2rem" : "3rem"}
         >
           <Gameboard />
         </Flex>
