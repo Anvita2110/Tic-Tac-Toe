@@ -8,11 +8,10 @@ export default function Playerboard({ player, symbol, isMobileDevice }) {
       gap={isMobileDevice ? "4" : "8"}
       justifyContent="center"
       alignItems="center"
-      p={isMobileDevice ? "1rem" : "2rem"}
+      p={isMobileDevice ? "1.5rem" : "2rem"}
       borderRadius="1.5rem"
       boxShadow="5px 5px 10px #f5fb4f"
-      bgColor=" #ccb3ff
-"
+      bgColor="#ccb3ff"
     >
       <Heading
         fontSize={isMobileDevice ? "xl" : "3xl"}

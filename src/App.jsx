@@ -9,7 +9,6 @@ function App() {
       <Heading
         justifyContent="center"
         alignItems="center"
-        p="3"
         h="10vh"
         display="flex"
         color="#f5fb4f"
@@ -26,8 +25,8 @@ function App() {
         <Flex
           justifyContent="center"
           alignItems="center"
-          marginBottom={isMobileDevice ? "1rem" : "4rem"}
-          gap={isMobileDevice ? "4" : "20"}
+          marginBottom={isMobileDevice ? "2rem" : "3rem"}
+          gap={isMobileDevice ? "10" : "20"}
         >
           <Playerboard
             player="Player 1"
