@@ -1,23 +1,30 @@
 import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
 import { Flex, Heading } from "@chakra-ui/react";
 
-export default function Playerboard({ player, symbol }) {
+export default function Playerboard({ player, symbol, isMobileDevice }) {
   return (
     <Flex
       flexDirection="column"
-      gap="8"
+      gap={isMobileDevice ? "4" : "8"}
       justifyContent="center"
       alignItems="center"
-      // border="solid 2px"
-      h="25%"
-      p="2rem"
+      p={isMobileDevice ? "0.5rem" : "2rem"}
       borderRadius="1.5rem"
       boxShadow="5px 5px 10px #f5fb4f"
       bgColor=" #ccb3ff
 "
     >
-      <Heading textDecor="underline solid">{player}</Heading>
-      {symbol === "X" ? <CloseIcon boxSize={8} /> : <CheckIcon boxSize={8} />}
+      <Heading
+        fontSize={isMobileDevice ? "xl" : "3xl"}
+        textDecor="underline solid"
+      >
+        {player}
+      </Heading>
+      {symbol === "X" ? (
+        <CloseIcon boxSize={isMobileDevice ? 4 : 8} />
+      ) : (
+        <CheckIcon boxSize={isMobileDevice ? 4 : 8} />
+      )}
     </Flex>
   );
 }
