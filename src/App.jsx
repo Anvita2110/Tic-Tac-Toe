@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { useState } from "react";
+import Playerboard from "./components/Playerboard";
+import Gameboard from "./components/Gameboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Flex flexDirection="column" bgColor="#dfc5fe">
+      <Heading
+        justifyContent="center"
+        alignItems="center"
+        p="4"
+        h="15vh"
+        display="flex"
+        color="#9e56e1"
+      >
+        Tic-Tac-Toe
+      </Heading>
+      <Flex h="85vh" justifyContent="center" alignItems="center">
+        <Flex flexGrow={1} justifyContent="end" alignItems="center">
+          <Playerboard player="Player 1" symbol="X" />
+        </Flex>
+        <Flex
+          flexGrow={3}
+          justifyContent="center"
+          alignItems="center"
+          bgColor="#ccb3ff"
+          boxShadow="5px 5px 10px #9e56e1"
+          width="2%"
+          py="6%"
+          mx="6%"
+          borderRadius="xl"
+        >
+          <Gameboard />
+        </Flex>
+        <Flex flexGrow={1} justifyContent="start" alignItems="center">
+          <Playerboard player="Player 2" symbol="O" />
+        </Flex>
+      </Flex>
+    </Flex>
+  );
 }
 
-export default App
+export default App;
