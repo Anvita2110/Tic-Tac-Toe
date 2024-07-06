@@ -28,8 +28,6 @@ export default function Gameboard({ isMobileDevice }) {
   const [winner, setWinner] = useState(null);
   const [count, setCount] = useState(0);
 
-  console.log(winner);
-
   function handleClick(rowIdx, colIdx) {
     setGameBoard((prevBoard) => {
       const updatedBoard = [...prevBoard.map((col) => [...col])];
@@ -102,6 +100,7 @@ export default function Gameboard({ isMobileDevice }) {
               }}
               boxShadow="5px 5px 10px #3d3d3d"
               bg="#f7fb82"
+              key={`${row}${col}`}
             />
           ))}
         </Flex>

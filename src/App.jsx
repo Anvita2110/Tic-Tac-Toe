@@ -27,7 +27,7 @@ function App() {
         <Flex
           justifyContent="center"
           alignItems="center"
-          marginBottom="4rem"
+          marginBottom={isMobileDevice ? "1rem" : "4rem"}
           gap="4"
         >
           <Playerboard
