@@ -1,5 +1,4 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Flex, Heading } from "@chakra-ui/react";
 import Playerboard from "./components/Playerboard";
 import Gameboard from "./components/Gameboard";
 
@@ -12,9 +11,10 @@ function App() {
         p="4"
         h="15vh"
         display="flex"
-        color="#9e56e1"
+        color="#f5fb4f"
+        textShadow="3px 3px 0 #000000"
       >
-        Tic-Tac-Toe
+        Tic-Tac-Toe By Anvita
       </Heading>
       <Flex h="85vh" justifyContent="center" alignItems="center">
         <Flex flexGrow={1} justifyContent="end" alignItems="center">

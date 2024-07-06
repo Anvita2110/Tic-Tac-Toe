@@ -13,7 +13,6 @@ import {
   ModalCloseButton,
   ModalFooter,
 } from "@chakra-ui/react";
-import { color } from "framer-motion";
 import { useState } from "react";
 import { checkWinner } from "../utils/utils.js";
 
@@ -51,7 +50,12 @@ export default function Gameboard() {
 
   return (
     <Flex flexDirection="column" gap="0.5rem">
-      <Modal isOpen={winner != null || count === 9} onClose={handleClose}>
+      <Modal
+        isCentered={true}
+        isOpen={winner != null || count === 9}
+        onClose={handleClose}
+        size="xl"
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader textAlign="center">
@@ -65,7 +69,10 @@ export default function Gameboard() {
               </Text>
             ) : (
               <Text fontSize="xl" fontWeight="bold" textAlign="center">
-                The winner is {winner === "X" ? "Player 1" : "Player 2"}
+                The winner is{" "}
+                {winner === "X"
+                  ? "Player 1 ( X ) 🎉"
+                  : `Player 2 ( ${"\u2713"} ) 🎉`}
               </Text>
             )}
           </ModalBody>
@@ -76,8 +83,6 @@ export default function Gameboard() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      {winner != null ? <Text> The winner is {winner}</Text> : null}
-      {count === 9 ? <Heading>It's a draw!</Heading> : null}
       {gameBoard.map((row, rowIdx) => (
         <Flex gap="0.5rem" justifyContent="center">
           {row.map((col, colIdx) => (
@@ -96,6 +101,7 @@ export default function Gameboard() {
                 width: "100px",
               }}
               boxShadow="5px 5px 10px #3d3d3d"
+              bg="#f7fb82"
             />
           ))}
         </Flex>
