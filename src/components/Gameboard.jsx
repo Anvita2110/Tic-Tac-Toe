@@ -95,12 +95,11 @@ export default function Gameboard({ isMobileDevice }) {
               onClick={() => handleClick(rowIdx, colIdx)}
               isDisabled={gameBoard[rowIdx][colIdx] != null}
               style={{
-                height: isMobileDevice ? "40px" : "100px",
-                width: isMobileDevice ? "40px" : "100px",
+                height: isMobileDevice ? "70px" : "100px",
+                width: isMobileDevice ? "70px" : "100px",
               }}
               boxShadow="5px 5px 10px #3d3d3d"
               bg="#f7fb82"
-              key={`${row}${col}`}
             />
           ))}
         </Flex>

@@ -14,7 +14,6 @@ function App() {
         display="flex"
         color="#f5fb4f"
         textShadow="3px 3px 0 #000000"
-        m="0"
       >
         Tic-Tac-Toe By Anvita
       </Heading>
@@ -28,7 +27,6 @@ function App() {
           justifyContent="center"
           alignItems="center"
           marginBottom={isMobileDevice ? "1rem" : "4rem"}
-          gap="4"
         >
           <Playerboard
             player="Player 1"
