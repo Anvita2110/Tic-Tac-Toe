@@ -25,7 +25,7 @@ function App() {
         <Flex
           justifyContent="center"
           alignItems="center"
-          marginBottom={isMobileDevice ? "2rem" : "3rem"}
+          marginBottom="2rem"
           gap={isMobileDevice ? "10" : "20"}
         >
           <Playerboard
@@ -45,6 +45,8 @@ function App() {
           bgColor="#ccb3ff"
           boxShadow="5px 5px 10px #9e56e1"
           borderRadius="xl"
+          py="2.5rem"
+          px="3rem"
         >
           <Gameboard />
         </Flex>
